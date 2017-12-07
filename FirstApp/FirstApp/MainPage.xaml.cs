@@ -13,10 +13,5 @@ namespace FirstApp
         {
             InitializeComponent();
         }
-
-        private void OnButtonClicked(object sender, EventArgs e)
-        {
-            MyButton.Text = "cjknsc";
-        }
     }
 }

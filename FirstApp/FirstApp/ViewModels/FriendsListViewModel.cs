@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using FirstApp.Annotations;
+using FirstApp.Models;
 using FirstApp.Views;
 using Xamarin.Forms;
 
@@ -66,10 +67,18 @@ namespace FirstApp.ViewModels
         }
         private void SaveFriend(object friendObject)
         {
-            FriendViewModel friend = friendObject as FriendViewModel;
-            if (friend != null && friend.IsValid)
+            FriendViewModel friendModel = friendObject as FriendViewModel;
+            if (friendModel != null && friendModel.IsValid)
             {
-                Friends.Add(friend);
+                var friend = new Friend
+                {
+                    Name = friendModel.Name,
+                    Email = friendModel.Email,
+                    Phone = friendModel.Phone,
+                    Image = friendModel.Image           
+                };
+                //Friends.Add(friend);
+                App.Database.SaveItem(friend);
             }
             Back();
         }

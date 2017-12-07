@@ -106,18 +106,18 @@ namespace FirstApp.ViewModels
             }
         }
 
-        //public string Image
-        //{
-        //    get { return Friend.Image; }
-        //    set
-        //    {
-        //        if (Friend.Image != value)
-        //        {
-        //            Friend.Image = value;
-        //            OnPropertyChanged("Image");
-        //        }
-        //    }
-        //}
+        public string Image
+        {
+            get { return Friend.Image; }
+            set
+            {
+                if (Friend.Image != value)
+                {
+                    Friend.Image = value;
+                    OnPropertyChanged("Image");
+                }
+            }
+        }
 
         public bool IsValid
         {

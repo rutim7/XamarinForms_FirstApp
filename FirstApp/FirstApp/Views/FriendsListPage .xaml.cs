@@ -17,5 +17,10 @@ namespace FirstApp.Views
             InitializeComponent();
             BindingContext = new FriendsListViewModel() { Navigation = this.Navigation };
         }
+        protected override void OnAppearing()
+        {
+            friendsList.ItemsSource = App.Database.GetItems();
+            base.OnAppearing();
+        }
     }
 }

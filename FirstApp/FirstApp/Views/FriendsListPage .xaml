@@ -4,7 +4,7 @@
              x:Class="FirstApp.Views.FriendsListPage" Title="List of friends">
     <StackLayout>
         <Button Text="Create new friend" Command="{Binding CreateFriendCommand}" />
-        <ListView x:Name="booksList" ItemsSource="{Binding Friends}"
+        <ListView x:Name="friendsList" ItemsSource="{Binding Friends}"
                   SelectedItem="{Binding SelectedFriend, Mode=TwoWay}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>

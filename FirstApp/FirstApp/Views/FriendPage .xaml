@@ -5,10 +5,16 @@
     <StackLayout>
         <StackLayout x:Name="friendStack">
             <StackLayout VerticalOptions="Center">
-                <Label Text="Avatar"/>
-                <Frame  HeightRequest="300" WidthRequest="300">
-                    <Image x:Name="AvaImage" HorizontalOptions="Center"/>
-                </Frame>
+                <Label Text="Avatar" HorizontalOptions="Center"/>
+
+                <StackLayout BackgroundColor="Gray"  HorizontalOptions="Center" >
+                    <Image x:Name="AvaImage"  
+                           HeightRequest="250"
+                           WidthRequest="250"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Aspect="AspectFill" />
+                </StackLayout>
                 <Button x:Name="LoadPicture" Text="+" Clicked="LoadImage" HorizontalOptions="Center"/>
             </StackLayout>
             <Label Text="Name"/>
